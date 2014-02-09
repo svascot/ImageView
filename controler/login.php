@@ -8,7 +8,7 @@ $pass = $_POST['usr_pass'];
 
 
 include "connection.php";
-
+	session_start();
 	$login = mysql_query("select * FROM login WHERE iduser = '".$user."'",$connection);
 	$row = mysql_fetch_array($login);
 
@@ -19,18 +19,21 @@ if($user != null and $pass != null){
 	if($user == $userbd){ 
 		if($pass == $passbd){
 			
-			session_start();
+		
 			$_SESSION['session_user'] = $userbd;
-			$_SESSION['session_pass'] = $passbd;
-			header('Location: ../home.html');
+			header('Location: ../home.php');
 
 		}else{
-			header('Location: ../index.html');
+			//$_SESSION['message'] = "Invalid password";
+			header('Location: ../index.php');
 		}
 	}else{
-		header('Location: ../index.html');
+		//$_SESSION['message'] = "Invalid User";
+		header('Location: ../index.php');
 	}
 }else{
-	header('Location: ../index.html');
+	//$_SESSION['message'] = "Llene todos los campos";
+	header('Location: ../index.php');
+
 }
 ?>
