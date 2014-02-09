@@ -24,15 +24,15 @@ if($user != null and $pass != null){
 			header('Location: ../home.php');
 
 		}else{
-			//$_SESSION['message'] = "Invalid password";
+			$_SESSION['message'] = 'Invalid password!';
 			header('Location: ../index.php');
 		}
 	}else{
-		//$_SESSION['message'] = "Invalid User";
+		$_SESSION['message'] = 'Invalid User?';
 		header('Location: ../index.php');
 	}
 }else{
-	//$_SESSION['message'] = "Llene todos los campos";
+	$_SESSION['message'] = '...and the User ans Pass??';
 	header('Location: ../index.php');
 
 }

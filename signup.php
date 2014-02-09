@@ -8,13 +8,14 @@
 <center>
 <div id="container" style="width:100%">
 
-<div id="header" style="background-color:#6666FF;">
-	<br>
-	<h1 style="margin-bottom:0; color: white;"> IMAGESVIEW </h1>
-	<br>
-</div>
+	<div id="header" style="background-color:#006699;">
+		<br>
+		<h1 style="margin-bottom:0; color: white; font-size:55px;"> IMAGESVIEW </h1>
+		<br>
+		<br>
+	</div>
 
-	<div id="content" style="background-color:#EEEEEE; margin-left:auto; margin-right:auto; width:100%; height:50%;">
+	<div id="content" style="margin-left:auto; margin-right:auto; width:100%;">
 	<br><br>
 		Create your account to upload your Picts!
 		<br><br>
@@ -57,10 +58,10 @@
 	
 	</div>
 
-<div id="footer" style="background-color:#6666FF;clear:both;color:white;">
-<br>
-	Santiago Vasco T - Ingenieria de Sistemas - Universidad EAFIT - 2014 
+<div id="footer" style="background-color:#006699;clear:both;color:white;">
 <br><br>
+	Santiago Vasco T - Ingenieria de Sistemas - Universidad EAFIT - 2014 
+<br><br><br>
 </div>
 
 </div>

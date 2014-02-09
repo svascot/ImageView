@@ -8,13 +8,14 @@
 <center>
 <div id="container" style="width:100%">
 
-<div id="header" style="background-color:#6666FF;">
-	<br>
-	<h1 style="margin-bottom:0; color: white;"> IMAGESVIEW </h1>
-	<br>
-</div>
+	<div id="header" style="background-color:#006699;">
+		<br>
+		<h1 style="margin-bottom:0; color: white; font-size:55px;"> IMAGESVIEW </h1>
+		<br>
+		<br>
+	</div>
 
-	<div id="content" style="width:100%; height:50%;">
+	<div id="content" style="width:100%;">
 	
 		<div style="float:left;">
 		<br><br>
@@ -46,7 +47,7 @@
 						$row=0;
 					}
 					echo '<td>';
-					echo '<img src="'.$files[$i].'"border = "0" style="border-color:#6666FF; width:150px;magin=10px;"/>';
+					echo '<img src="'.$files[$i].'"border = "2" style="border-color:#006699; width:150px;magin=10px;"/>';
 					#echo '<a name="'.$i.'" href="#'.$i.'"><img src="'.$files[$i].'"/></a>';
 					# esto imprime el nombre echo substr($files[$i], strlen($folder),strpos($files[$i],'.')-strlen($folder));
 					echo '</td>';
@@ -58,11 +59,11 @@
 		</div>
 	</div>
 
-<div id="footer" style="background-color:#6666FF;clear:both; color:white;">
-<br>
-	Santiago Vasco T - Ingenieria de Sistemas - Universidad EAFIT - 2014 
-<br><br>
-</div>
+	<div id="footer" style="background-color:#006699;clear:both; color:white;">
+		<br><br>
+			Santiago Vasco T - Ingenieria de Sistemas - Universidad EAFIT - 2014 
+		<br><br><br>
+	</div>
 
 </div>
 
