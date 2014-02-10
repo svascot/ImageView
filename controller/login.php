@@ -18,10 +18,9 @@ include "connection.php";
 if($user != null and $pass != null){
 	if($user == $userbd){ 
 		if($pass == $passbd){
-			
-		
+					
 			$_SESSION['session_user'] = $userbd;
-			header('Location: ../home.php');
+			header('Location: infouser.php');
 
 		}else{
 			$_SESSION['message'] = 'Invalid password!';
