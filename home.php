@@ -18,22 +18,28 @@
 
 	<div id="content" style="width:100%;">
 	
-		<div border="2" style="float:left;width:300px;">
-		<br>
+		<div style="float:left;width:300px;">
 		<?php
 		session_start();
 		if ($_SESSION['session_user']) {
-			echo 'Hello '.$_SESSION['session_user_name'] .' do you wanna upload something?';
+			echo '	<a href="/controler/kill.php" style="text-decoration:none;">
+						<h5 style="color:#006699; ">Log Out!</h5>
+		 			</a>
+					<h3 style="color:#006699;text-decoration:none;"> 
+						Hello '.$_SESSION['session_user_name'] .' do you wanna upload something? 
+					</h3>';
 		}else{
+
+			echo '	<a href="index.php" style="text-decoration:none;">
+						<h3 style="color:#006699; ">Sign in here!</h3>
+		 			</a>';
 			echo $_SESSION['message'];
 		}
-		?>
-		<br><br>
-			<table>	
+		?>	<table>	
 
 				<form action="/controler/upload.php" method="post" enctype="multipart/form-data">
 				<tr>
-					<td><input name="archivo" type="file" size="70" /> </td>
+					<td><input name="archivo" type="file" size="10" /> </td>
      			</tr>
      			<tr>
      				<td><input name="enviar" type="submit" value="Upload" /></td>
@@ -57,7 +63,7 @@
 						$row=0;
 					}
 					echo '<td>';
-					echo '<img src="'.$files[$i].'"border = "0" style="border-color:#006699; width:100px;"/>';
+					echo '<img src="'.$files[$i].'"border = "0" style="border-color:#006699; width:150px;"/>';
 					#echo '<a name="'.$i.'" href="#'.$i.'"><img src="'.$files[$i].'"/></a>';
 					# esto imprime el nombre echo substr($files[$i], strlen($folder),strpos($files[$i],'.')-strlen($folder));
 					echo '</td>';
@@ -67,6 +73,11 @@
 				echo "</table>";
 			?>
 		</div>
+
+		<div style="float:left; margin:10px;">
+			Aqui ira el motor de busqueda
+		</div>
+
 	</div>
 
 	<div id="footer" style="background-color:#006699;clear:both; color:white;">
