@@ -9,7 +9,7 @@ $pass = $_POST['usr_pass'];
 
 include "connection.php";
 	session_start();
-	$login = mysql_query("select * FROM login WHERE iduser = '".$user."'",$connection);
+	$login = mysql_query("select * FROM login WHERE iduser = '".$user."'",$connectionLogin);
 	$row = mysql_fetch_array($login);
 
 	$userbd = $row['iduser'];
