@@ -22,7 +22,7 @@
 		<?php
 		session_start();
 		if ($_SESSION['session_user']) {
-			echo '	<a href="/controler/kill.php" style="text-decoration:none;">
+			echo '	<a href="/controller/kill.php" style="text-decoration:none;">
 						<h5 style="color:#006699; ">Log Out!</h5>
 		 			</a>
 					<h3 style="color:#006699;text-decoration:none;"> 
@@ -33,11 +33,11 @@
 			echo '	<a href="index.php" style="text-decoration:none;">
 						<h3 style="color:#006699; ">Sign in here!</h3>
 		 			</a>';
-			echo $_SESSION['message'];
+			echo $_SESSION['messageUpload'];
 		}
 		?>	<table>	
 
-				<form action="/controler/upload.php" method="post" enctype="multipart/form-data">
+				<form action="/controller/upload.php" method="post" enctype="multipart/form-data">
 				<tr>
 					<td><input name="archivo" type="file" size="10" /> </td>
      			</tr>
@@ -63,7 +63,7 @@
 						$row=0;
 					}
 					echo '<td>';
-					echo '<img src="'.$files[$i].'"border = "0" style="border-color:#006699; width:150px;"/>';
+					echo '<a href="'.$files[$i].'"/><img src="'.$files[$i].'"border = "0" style="border-color:#006699; width:150px;"/></a>';
 					#echo '<a name="'.$i.'" href="#'.$i.'"><img src="'.$files[$i].'"/></a>';
 					# esto imprime el nombre echo substr($files[$i], strlen($folder),strpos($files[$i],'.')-strlen($folder));
 					echo '</td>';
