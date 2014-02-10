@@ -18,12 +18,12 @@
 
 	<div id="content" style="width:100%;">
 	
-		<div style="float:left;width:200px;">
+		<div border="2" style="float:left;width:300px;">
 		<br>
 		<?php
 		session_start();
 		if ($_SESSION['session_user']) {
-			echo 'Hello '.$_SESSION['session_user'];
+			echo 'Hello '.$_SESSION['session_user_name'] .' do you wanna upload something?';
 		}else{
 			echo $_SESSION['message'];
 		}
@@ -43,7 +43,7 @@
  	   		</table>	
 		</div>
 
-		<div style="float:left; width:80%;">
+		<div style="float:left;">
 			<?php
 				$folder = 'upload/';
 				$filetype = '*.*';
