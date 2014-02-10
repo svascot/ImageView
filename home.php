@@ -23,7 +23,7 @@
 		<?php
 		session_start();
 		if ($_SESSION['session_user']) {
-			echo 'Hello 	'.$_SESSION['session_user'];
+			echo 'Hello '.$_SESSION['session_user'];
 		}else{
 			echo $_SESSION['message'];
 		}
