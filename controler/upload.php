@@ -2,12 +2,11 @@
 
 session_start();
 
-echo $_SESSION['session_user']; 
-
 if($_SESSION['session_user']){
     if ($_FILES['archivo']["error"] > 0)
         {
-            echo "Error: " . $_FILES['archivo']['error'] . "<br>";
+            $_SESSION['message'] = 'Error: ' . $_FILES['archivo']['error'] . '<br>';
+            header('Location: ../home.php');
         }else{
 
             //OJO! chmod o+rw upload <- con estoy le di los permisos a la carpeta par apoder subir archivos... :)
@@ -15,6 +14,7 @@ if($_SESSION['session_user']){
             
        }
 }else{
-    echo "inicie session";
+    $_SESSION['message'] = 'You most be loged.';
+    header('Location: ../home.php');
 }
 ?>

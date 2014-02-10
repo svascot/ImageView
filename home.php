@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	 <title>ImageView! - Home</title>
 </head>
 
 <body style="font-family: arial;">
@@ -17,7 +18,16 @@
 
 	<div id="content" style="width:100%;">
 	
-		<div style="float:left;">
+		<div style="float:left;width:200px;">
+		<br>
+		<?php
+		session_start();
+		if ($_SESSION['session_user']) {
+			echo 'Hello '.$_SESSION['session_user'];
+		}else{
+			echo $_SESSION['message'];
+		}
+		?>
 		<br><br>
 			<table>	
 
@@ -33,7 +43,7 @@
  	   		</table>	
 		</div>
 
-		<div style="float:left;">
+		<div style="float:left; width:80%;">
 			<?php
 				$folder = 'upload/';
 				$filetype = '*.*';
@@ -47,7 +57,7 @@
 						$row=0;
 					}
 					echo '<td>';
-					echo '<img src="'.$files[$i].'"border = "2" style="border-color:#006699; width:150px;magin=10px;"/>';
+					echo '<img src="'.$files[$i].'"border = "0" style="border-color:#006699; width:100px;"/>';
 					#echo '<a name="'.$i.'" href="#'.$i.'"><img src="'.$files[$i].'"/></a>';
 					# esto imprime el nombre echo substr($files[$i], strlen($folder),strpos($files[$i],'.')-strlen($folder));
 					echo '</td>';

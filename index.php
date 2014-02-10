@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	 <title>ImageView!</title>
 </head>
 
 <body style="font-family: arial;">
@@ -31,6 +32,7 @@
 				<td><label>Password</label></td><td> <input type="password" name="usr_pass"> </td>
 				</tr>
 	
+
 				<tr>
 				<td></td><td><input type="submit" value="Sign in"></td>
 				</tr>

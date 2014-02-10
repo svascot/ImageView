@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	 <title>ImageView! - signup</title>
 </head>
 
 <body style="font-family: arial;">
@@ -52,11 +53,12 @@
 	
 	</form> 
 	</table>
-
-	<br><br>
-
-	
 	</div>
+	<br>
+	<div>
+		<?php session_start(); echo $_SESSION['message'];?>		
+	</div>
+	<br><br>
 
 <div id="footer" style="background-color:#006699;clear:both;color:white;">
 <br><br>
