@@ -1,7 +1,4 @@
 <?php
-/**
- * Objeto tipo Turno que contiene un Entero Numero
- */
 class Login {
     
     public $user;
