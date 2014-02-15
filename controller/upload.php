@@ -1,5 +1,12 @@
  <?php
 
+include 'businessLogic.php';
+
+$businessLogic = new businessLogic();
+
+$businessLogic->Upload();
+
+/*
 session_start();
 
 if($_SESSION['session_user']){
@@ -20,4 +27,5 @@ if($_SESSION['session_user']){
     $_SESSION['messageUpload'] = 'You most be loged.';
     header('Location: ../home.php');
 }
+*/
 ?>
