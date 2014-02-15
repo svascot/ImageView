@@ -88,6 +88,12 @@ class dataAccessUser {
              
     }
 
+    public function Image($name,$user,$tag) {
+     
+        $consulta = $this->consulta("insert into images (name,user,tag) values ('".$name."','".$user."','".$tag."')");
+             
+    }
+
 }
 
 ?>

@@ -66,6 +66,9 @@ class businessLogic {
               //OJO! chmod o+rw upload <- con estoy le di los permisos a la carpeta par apoder subir archivos... :)
               move_uploaded_file($_FILES['archivo']['tmp_name'],'../upload/'.$_FILES['archivo']['name']);
 
+              $daoUser = dataAccessUser::instancia();  
+              $daoUser->Image($_FILES['archivo']['name'],$_SESSION['session_user'],$tag);
+
               $_SESSION['messageUpload']='success';
               header('Location: ../home.php');         
           }
