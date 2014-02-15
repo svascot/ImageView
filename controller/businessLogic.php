@@ -55,7 +55,7 @@ class businessLogic {
     }
 
 
-  function Upload(){
+  function Upload($tag){
     if($_SESSION['session_user']){
       if ($_FILES['archivo']["error"] > 0)
           {

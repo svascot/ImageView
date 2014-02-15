@@ -39,12 +39,18 @@
 
 				<form action="/controller/upload.php" method="post" enctype="multipart/form-data">
 				<tr>
-					<td><input name="archivo" type="file" size="10" /> </td>
+    	  			<td>Write a tag for this pic.</td>
+    	  		</tr>
+    	  		<tr>
+     				<td><input name="tag" type="text" value="" /></td>
+    	  		</tr>
+				<tr>
+					<td><input name="archivo" type="file" size="35" /> </td>
      			</tr>
      			<tr>
      				<td><input name="enviar" type="submit" value="Upload" /></td>
     	  		</tr>
-    	  			<input name="action" type="hidden" value="upload" />    
+    	  			<input name="action" type="hidden" value="" />    
  	   			</form>
  	   		</table>	
 		</div>
@@ -74,7 +80,7 @@
 			?>
 		</div>
 
-		<div style="float:left; margin:10px;">
+		<div style="float:right;">
 			Aqui ira el motor de busqueda
 		</div>
 
