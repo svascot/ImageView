@@ -59,13 +59,6 @@ class dataAccessUser {
         return $resultado;
     }
 
-     /**
-     *Captura todas las consultas que se han realizado. 
-     */
-    public function getTotalConsultas() {
-        return $this->total_consultas;
-    }
-
 
    public function UserInfo($user) {
 
@@ -92,6 +85,21 @@ class dataAccessUser {
      
         $consulta = $this->consulta("insert into images (name,user,tag) values ('".$name."','".$user."','".$tag."')");
              
+    }
+
+     public function selectImages($tag) {
+        $images = array();
+        $consulta = $this->consulta("select name FROM images WHERE tag = '".$tag."'");
+        if ($this->num_rows($consulta) > 0) {
+            while ($resultados = $this->fetch_array($consulta)) {
+                $images[] = 'upload/'.$resultados[0];
+            }
+            return $images;
+          } else {
+            return "notfound";
+            die;
+        }
+      
     }
 
 }

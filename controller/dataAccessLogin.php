@@ -59,14 +59,6 @@ class dataAccessLogin {
         return $resultado;
     }
 
-     /**
-     *Captura todas las consultas que se han realizado. 
-     */
-    public function getTotalConsultas() {
-        return $this->total_consultas;
-    }
-
-
     /**
      * 
      * realizando un Query que es enviado a la base de datos para que opere en ella.

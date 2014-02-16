@@ -35,7 +35,8 @@
 		 			</a>';
 			echo $_SESSION['messageUpload'];
 		}
-		?>	<table>	
+		?>	
+			<table>	
 
 				<form action="/controller/upload.php" method="post" enctype="multipart/form-data">
 				<tr>
@@ -55,33 +56,57 @@
  	   		</table>	
 		</div>
 
-		<div style="float:left;">
+		<div style="float:left; width:600px; ">
+
+		<a href="/controller/showAll.php" style="text-decoration:none;">
+						<h3 style="color:#006699; ">Show All!</h3> </a>
 			<?php
 				$folder = 'upload/';
 				$filetype = '*.*';
-				$files = glob($folder.$filetype);
-				echo '<table>';
-				$row = 0; #number of rows
-				for($i=0; $i<count($files);$i++){
-				#for($i=0; $i<3;$i++){
-					if($row==5){
-						echo '<tr>';
-						$row=0;
-					}
-					echo '<td>';
-					echo '<a href="'.$files[$i].'"/><img src="'.$files[$i].'"border = "0" style="border-color:#006699; width:150px;"/></a>';
-					#echo '<a name="'.$i.'" href="#'.$i.'"><img src="'.$files[$i].'"/></a>';
-					# esto imprime el nombre echo substr($files[$i], strlen($folder),strpos($files[$i],'.')-strlen($folder));
-					echo '</td>';
-					$row++;
-					
+				if ($_SESSION['filter'] == 'true') {
+					$files = $_SESSION['images'];
+				}else{
+					$files = glob($folder.$filetype);
+				}
+
+					echo '<table>';
+					$row = 0; #number of rows
+				
+					for($i=0; $i<count($files);$i++){
+						
+						if($row==5){
+							echo '<tr>';
+							$row=0;
+						}
+						echo '<td>';
+						echo '<a href="'.$files[$i].'"/><img src="'.$files[$i].'"border = "0" style="border-color:#006699; width:150px;"/></a>';
+						# esto imprime el nombre 
+						# echo substr($files[$i], strlen($folder),strpos($files[$i],'.')-strlen($folder));
+						echo '</td>';
+						$row++;
 				}
 				echo "</table>";
 			?>
 		</div>
 
 		<div style="float:right;">
-			Aqui ira el motor de busqueda
+			
+			<h3 style="color:#006699;text-decoration:none;"> 
+				Images filter
+			</h3>
+
+			<table>	
+
+				<form action="/controller/filter.php" method="post" enctype="multipart/form-data">
+				<tr>
+     				<td><input name="tag" type="text" value="" /></td>
+    	  		</tr>
+				<tr>
+     				<td><input name="filtrar" type="submit" value="Go!" /></td>
+    	  		</tr> 
+ 	   			</form>
+ 	   		</table>	
+
 		</div>
 
 	</div>

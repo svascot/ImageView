@@ -54,6 +54,22 @@ class businessLogic {
 
     }
 
+    function imageFilter($tag){
+
+        $daoUser = dataAccessUser::instancia();  
+        $images = $daoUser->selectImages($tag);
+
+        if(is_array($images)){
+          $_SESSION['filter'] = 'true';
+          $_SESSION['images'] = $images;
+        }else{
+          $_SESSION['filter'] = 'false';
+        }
+        header('Location: ../home.php');
+     }
+
+    
+
 
   function Upload($tag){
     if($_SESSION['session_user']){

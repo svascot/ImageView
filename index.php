@@ -18,11 +18,11 @@
 
 	<div id="content" style=" width:100%;">
 
-		<div style="float:left; width:33%">
+		<div style="float:left; width:33%;">
 
 			<h1 style="color:#006699; ">Sign In</h1>
 			<table>	
-				<form action="/controler/login.php" method="post">
+				<form action="/controller/login.php" method="post">
 		
 				<tr>
 				<td><label>Username</label></td> <td><input type="text" name="usr_name"></td> 
